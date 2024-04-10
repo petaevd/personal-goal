@@ -1,18 +1,23 @@
 import { Route, Routes } from 'react-router-dom';
-import Main from './page/Main';
-import Profile from './page/Profile';
-import Goals from './page/Goals';
+import MainPage from './pages/MainPage/MainPage.tsx';
+import ProfilePage from './pages/ProfilePage/ProfilePage.tsx';
+import GoalsPage from './pages/GoalsPage/GoalsPage.tsx';
+import LoginPage from './pages/LoginPage/LoginPage.tsx';
+import SignupPage from './pages/SignupPage/SignupPage.tsx';
+
 
 function App() {
 
   return (
     <>
-      
+
       <Routes>
-        <Route path='/' element={ <Main /> }/>
-        <Route path='/profile' element={ <Profile /> }/>
-        <Route path='/goals' element={ <Goals /> }/>
-        <Route path='*' element={ <Main /> }/>
+        <Route path='/' element={ <MainPage /> }/>
+        <Route path='/profile' element={ <ProfilePage /> }/>
+        <Route path='/goals' element={ <GoalsPage /> }/>
+        <Route path='/login' element={ <LoginPage /> }/>
+        <Route path='/signup' element={ <SignupPage />}/>
+        <Route path='*' element={ <MainPage /> }/>
       </Routes>
     </>
   );

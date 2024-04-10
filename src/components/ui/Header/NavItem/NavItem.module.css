@@ -1,0 +1,12 @@
+.nav-item {
+    padding: 10px;
+}
+
+.nav-item-link {
+    font-size: 25px;
+    font-weight: 500;
+    font-style: normal;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none; /* Убираем нижнее подчеркивание */
+    color: #000; /* Изменяем цвет ссылок */
+}

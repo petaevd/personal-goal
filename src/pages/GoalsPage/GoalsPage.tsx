@@ -1,4 +1,4 @@
-function Goals() {
+function GoalsPage() {
 
   return (
     <>
@@ -7,5 +7,5 @@ function Goals() {
   );
 }
     
-export default Goals;
+export default GoalsPage;
     

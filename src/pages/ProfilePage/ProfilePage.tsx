@@ -1,4 +1,4 @@
-function Profile() {
+function ProfilePage() {
 
   return (
     <>
@@ -7,5 +7,5 @@ function Profile() {
   );
 }
   
-export default Profile;
+export default ProfilePage;
   

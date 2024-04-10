@@ -1,17 +1,13 @@
 import { Link } from 'react-router-dom';
-import styles from '../AuthButton/AuthButton.module.css';
-
-interface AuthButtonProps {
-  title: string;
-  path: string;
-}
+import styles from './AuthButton.module.css';
+import {AuthButtonProps} from "./types.ts";
 
 function AuthButton({title, path} : AuthButtonProps) {
 
   return (
     <>
       <div className={styles['auth-button']}>
-        <Link to={path}>{title}</Link>
+        <Link className={styles['auth-button-link']} to={path}>{title}</Link>
       </div>
     </>
   );

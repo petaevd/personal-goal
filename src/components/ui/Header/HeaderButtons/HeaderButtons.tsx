@@ -1,5 +1,5 @@
-import AuthButton from '../AuthButton/AuthButton';
-import styles from '../HeaderButtons/HeaderButtons.module.css';
+import AuthButton from '../AuthButton/AuthButton.tsx';
+import styles from './HeaderButtons.module.css';
 
 function HeaderButtons() {
 
