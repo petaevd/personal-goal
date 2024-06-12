@@ -1,11 +1,22 @@
 .logo {
     display: flex;
-    text-align: center;
+    align-items: center;
     justify-content: center;
-    padding: 10px;
+    text-decoration: none;
+    padding: 5px;
 }
 
-.logo-img{
+.logo-img {
     width: 30px;
     height: 30px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.logo-text {
+    font-size: 25px;
+    font-weight: 500;
+    font-style: normal;
+    color: var(--color-text);
+    text-decoration: none;
 }

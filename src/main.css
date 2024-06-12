@@ -1,4 +1,23 @@
+:root {
+    --color-background: #F0F0F0;
+    --color-header: #FFFFFF;
+    --color-text: #333333;
+    --color-footer: #E6E6E6;
+    --color-main-block: #FFFFFF;
+}
+
+@font-face {
+    font-family: 'Nunito-Sans';
+    src: url('fonts/nunito-sans.ttf');
+}
+
 *{
     margin: 0;
     padding: 0;
+    font-family: 'Nunito-Sans', sans-serif;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--color-background);
 }

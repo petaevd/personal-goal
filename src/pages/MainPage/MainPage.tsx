@@ -1,11 +1,14 @@
-import Header from '../../components/form/Header/Header.tsx';
+import Header from '@components/widgets/Header/Header.tsx';
+import Board from '@components/widgets/Board/Board.tsx';
+import Footer from '@components/widgets/Footer/Footer.tsx';
 
 function MainPage() {
 
   return (
     <>
       <Header />
-      Главная страница
+      <Board />
+      <Footer />
     </>
   );
 }

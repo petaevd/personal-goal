@@ -1,0 +1,8 @@
+.goals-title{
+    font-size: 25px;
+    font-weight: 500;
+    font-style: normal;
+    text-decoration: none;
+    color: var(--color-text);
+    padding: 8px;
+}

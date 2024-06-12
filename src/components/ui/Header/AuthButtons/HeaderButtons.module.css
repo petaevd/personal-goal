@@ -1,0 +1,6 @@
+.auth-buttons{
+    display: flex;
+    align-items: center;
+    border-radius: 12px;
+    gap: 10px;
+}

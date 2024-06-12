@@ -3,7 +3,7 @@ import MainPage from './pages/MainPage/MainPage.tsx';
 import ProfilePage from './pages/ProfilePage/ProfilePage.tsx';
 import GoalsPage from './pages/GoalsPage/GoalsPage.tsx';
 import LoginPage from './pages/LoginPage/LoginPage.tsx';
-import SignupPage from './pages/SignupPage/SignupPage.tsx';
+import RegisterForm from '@components/form/RegisterForm/RegisterForm.tsx';
 
 
 function App() {
@@ -16,7 +16,7 @@ function App() {
         <Route path='/profile' element={ <ProfilePage /> }/>
         <Route path='/goals' element={ <GoalsPage /> }/>
         <Route path='/login' element={ <LoginPage /> }/>
-        <Route path='/signup' element={ <SignupPage />}/>
+        <Route path='/register' element={ <RegisterForm />}/>
         <Route path='*' element={ <MainPage /> }/>
       </Routes>
     </>

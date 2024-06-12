@@ -1,0 +1,32 @@
+/* GoalCard.module.css */
+.goalCard {
+    background-color: #ffffff; /* White background for a clean look */
+    border: 1px solid #e0e0e0; /* Light gray border */
+    border-radius: 8px; /* Rounded corners for a modern look */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    padding: 16px; /* Spacing inside the card */
+    margin: 16px 0; /* Spacing between cards */
+    max-width: 400px; /* Maximum width to ensure it doesn't get too wide */
+    transition: transform 0.2s; /* Smooth transition for hover effect */
+    word-break: break-all;
+}
+
+.goalCard:hover {
+    transform: translateY(-4px); /* Lift the card slightly on hover */
+}
+
+.goalCard h2 {
+    font-size: 1.5em; /* Larger font size for the title */
+    color: #333333; /* Dark gray color for good contrast */
+    margin-bottom: 8px; /* Space below the title */
+}
+
+.goalCard p {
+    font-size: 1em; /* Standard font size for paragraphs */
+    color: #666666; /* Medium gray for the description */
+    margin: 4px 0; /* Space above and below paragraphs */
+}
+
+.goalCard p strong {
+    color: #333333; /* Dark gray for labels */
+}

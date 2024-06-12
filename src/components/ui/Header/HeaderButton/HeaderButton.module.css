@@ -1,0 +1,17 @@
+.header-button {
+
+}
+
+.header-button-link {
+    font-size: 25px;
+    font-weight: 500;
+    font-style: normal;
+    text-decoration: none;
+    color: var(--color-text);
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.header-button-link:hover {
+    color: #555555;
+    transform: scale(1.1);
+}
