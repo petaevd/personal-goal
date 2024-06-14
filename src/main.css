@@ -4,6 +4,7 @@
     --color-text: #333333;
     --color-footer: #E6E6E6;
     --color-main-block: #FFFFFF;
+    --color-text-hover: #555555;
 }
 
 @font-face {

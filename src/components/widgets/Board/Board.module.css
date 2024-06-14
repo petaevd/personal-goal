@@ -1,8 +1,81 @@
-.board{
+.board {
+    padding: 40px;
+    background-color: #f5f5f5;
+    color: #333;
+    text-align: center;
+}
+
+.board__title {
+    margin-bottom: 20px;
+}
+
+.board__title h1 {
+    font-size: 36px;
+    color: #000;
+}
+
+.board__info {
     display: flex;
-    margin: 30px;
-    color: var(--color-text);
-    padding: 10px;
-    background-color: var(--color-main-block);
+    justify-content: space-around;
+    margin-bottom: 40px;
+}
+
+.board__info__card {
+    background-color: #fff;
+    border: 1px solid #ddd;
     border-radius: 10px;
+    padding: 20px;
+    width: 30%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.board__info__card:hover {
+    transform: scale(1.05);
+}
+
+.board__info__card h2 {
+    font-size: 24px;
+    color: #000;
+    margin-bottom: 10px;
+}
+
+.board__info__card p {
+    font-size: 16px;
+    color: #666;
+}
+
+.call-to-action {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}
+
+.call-to-action h2 {
+    font-size: 28px;
+    color: #000;
+}
+
+.call-to-action p {
+    font-size: 18px;
+    color: #666;
+}
+
+.register-button {
+    background-color: var(--color-text);
+    width: 234px;
+    text-decoration: none;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.register-button:hover {
+    background-color: var(--color-text-hover);
 }

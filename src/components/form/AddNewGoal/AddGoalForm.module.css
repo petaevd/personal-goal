@@ -1,0 +1,31 @@
+.addGoalForm {
+    display: flex;
+    flex-direction: column;
+}
+
+.addGoalForm label {
+    margin-bottom: 10px;
+}
+
+.addGoalForm input,
+.addGoalForm textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.addGoalForm button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    background-color: #28a745;
+    color: white;
+    cursor: pointer;
+}
+
+.addGoalForm button:hover {
+    background-color: #218838;
+}

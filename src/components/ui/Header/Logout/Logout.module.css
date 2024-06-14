@@ -2,16 +2,18 @@
 
 }
 
-.header-button-link {
+.logout-button {
     font-size: 25px;
     font-weight: 500;
     font-style: normal;
     text-decoration: none;
     color: var(--color-text);
     transition: color 0.3s ease, transform 0.3s ease;
+    border: none;
+    background: none;
+    cursor: pointer;
 }
 
-.header-button-link:hover {
-    color: var(--color-text-hover);
-    transform: scale(1.1);
+.logout-button:hover {
+    color: #555555;
 }
