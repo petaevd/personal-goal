@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import styles from './GoalsTitle.module.css';
 import CreateGoal from '@/modal/CreateGoal/CreateGoal.tsx';
-import AddGoalForm from '@components/form/AddNewGoal/AddGoalForm.tsx';
+import AddGoalForm from '@components/form/AddGoalForm/AddGoalForm.tsx';
 import axios from '@/axios.ts';
 
 function GoalsTitle() {

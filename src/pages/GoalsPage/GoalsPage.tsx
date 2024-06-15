@@ -1,5 +1,6 @@
 import Header from '@components/widgets/Header/Header.tsx';
 import Goals from '@components/widgets/Goals/Goals.tsx';
+import Footer from '@components/widgets/Footer/Footer.tsx';
 
 function GoalsPage() {
 
@@ -7,6 +8,7 @@ function GoalsPage() {
     <>
       <Header />
       <Goals />
+      <Footer />
     </>
   );
 }

@@ -10,7 +10,7 @@
 
 .goalList {
     display: flex;
-    justify-content: space-between;
+    justify-content: start;
     flex-direction: row;
     flex-wrap: wrap;
     gap: 20px;

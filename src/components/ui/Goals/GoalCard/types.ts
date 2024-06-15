@@ -4,4 +4,6 @@ export interface GoalCardProps {
   tags: string;
   startDate: string;
   endDate: string;
+  onEdit: () => void;
+  onDelete: () => void;
 }
