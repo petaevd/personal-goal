@@ -4,7 +4,7 @@ import GoalsTitle from '@components/ui/Goals/GoalsTitle/GoalsTitle.tsx';
 import GoalCard from '@components/ui/Goals/GoalCard/GoalCard.tsx';
 import { useDispatch, useSelector } from 'react-redux';
 import {fetchGoals, fetchDeleteGoal, fetchEditGoal} from '@/redux/slices/goals.ts';
-import CreateGoal from '@/modal/CreateGoal/CreateGoal.tsx';
+import CreateGoal from '@/modal/Modal/Modal';
 import EditGoalForm from '@components/form/EditGoalForm/EditGoalForm.tsx';
 
 function Goals() {

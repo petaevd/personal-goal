@@ -23,7 +23,7 @@ const RegistrationForm = () => {
 
   const onSubmit = async ( values : object) => {
     try {
-      const data = await dispatch(fetchRegister(values));
+      const data = dispatch(fetchRegister(values));
 
       if ('token' in data.payload) {
         window.localStorage.setItem('token', data.payload.token);

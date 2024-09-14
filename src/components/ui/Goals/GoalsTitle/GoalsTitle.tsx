@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import styles from './GoalsTitle.module.css';
-import CreateGoal from '@/modal/CreateGoal/CreateGoal.tsx';
+import CreateGoal from '@/modal/Modal/Modal';
 import AddGoalForm from '@components/form/AddGoalForm/AddGoalForm.tsx';
 import axios from '@/axios.ts';
 

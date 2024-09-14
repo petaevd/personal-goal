@@ -3,15 +3,15 @@ import MainPage from './pages/MainPage/MainPage.tsx';
 import ProfilePage from './pages/ProfilePage/ProfilePage.tsx';
 import GoalsPage from './pages/GoalsPage/GoalsPage.tsx';
 import LoginPage from './pages/LoginPage/LoginPage.tsx';
-import RegisterForm from '@components/form/RegisterForm/RegisterForm.tsx';
-import {useDispatch, useSelector} from 'react-redux';
+import {useDispatch } from 'react-redux';
 import {useEffect} from 'react';
-import {fetchAuthMe, selectIsAuth} from '@/redux/slices/auth.ts';
+import {fetchAuthMe } from '@/redux/slices/auth.ts';
+import AdminPage from '@pages/AdminPage/AdminPage.tsx';
+import RegisterPage from '@pages/RegisterPage/RegisterPage.tsx';
 
 
 function App() {
   const dispatch = useDispatch();
-  const isAuth = useSelector(selectIsAuth);
 
   useEffect(() => {
     dispatch(fetchAuthMe());
@@ -24,7 +24,8 @@ function App() {
         <Route path='/profile' element={ <ProfilePage /> }/>
         <Route path='/goals' element={ <GoalsPage /> }/>
         <Route path='/login' element={ <LoginPage /> }/>
-        <Route path='/register' element={ <RegisterForm />}/>
+        <Route path='/register' element={ <RegisterPage />}/>
+        <Route path='/admin' element={ <AdminPage /> }/>
         <Route path='*' element={ <MainPage /> }/>
       </Routes>
     </>

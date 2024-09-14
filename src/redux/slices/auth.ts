@@ -1,16 +1,18 @@
-import { createAsyncThunk, createSlice, PayloadAction } from '@reduxjs/toolkit';
+import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 import axios from '@/axios.ts';
+import { jwtDecode } from 'jwt-decode';
 
 interface AuthState {
   data: any;
-  status: 'loading' | 'loaded' | 'error';
+  role: string | null;
 }
 
 const initialState: AuthState = {
   data: null,
-  status: 'loading',
+  role: null,
 };
 
+// Логин
 export const fetchLogin = createAsyncThunk(
   'auth/fetchLogin',
   async (params) => {
@@ -19,6 +21,7 @@ export const fetchLogin = createAsyncThunk(
   }
 );
 
+// Регистрация
 export const fetchRegister = createAsyncThunk(
   'auth/fetchRegister',
   async (params) => {
@@ -27,6 +30,7 @@ export const fetchRegister = createAsyncThunk(
   }
 );
 
+// Получение данных о пользователе
 export const fetchAuthMe = createAsyncThunk('auth/fetchAuthMe', async () => {
   const { data } = await axios.get('/user/me');
   return data;
@@ -38,49 +42,33 @@ const authSlice = createSlice({
   reducers: {
     logout: (state) => {
       state.data = null;
-    }
+      state.role = null;
+    },
   },
   extraReducers: (builder) => {
     builder
-      .addCase(fetchLogin.pending, (state) => {
-        state.status = 'loading';
-        state.data = null;
-      })
-      .addCase(fetchLogin.fulfilled, (state, action: PayloadAction) => {
-        state.status = 'loaded';
+      .addCase(fetchLogin.fulfilled, (state, action) => {
         state.data = action.payload;
+        const decodedToken: any = jwtDecode(action.payload.token);
+        state.role = decodedToken.role;
       })
-      .addCase(fetchLogin.rejected, (state) => {
-        state.status = 'error';
-        state.data = null;
-      })
-      .addCase(fetchAuthMe.pending, (state) => {
-        state.status = 'loading';
-        state.data = null;
-      })
-      .addCase(fetchAuthMe.fulfilled, (state, action: PayloadAction) => {
-        state.status = 'loaded';
+      .addCase(fetchAuthMe.fulfilled, (state, action) => {
         state.data = action.payload;
+        if (action.payload.token) {
+          const decodedToken: any = jwtDecode(action.payload.token);
+          state.role = decodedToken.role;
+        }
       })
-      .addCase(fetchAuthMe.rejected, (state) => {
-        state.status = 'error';
-        state.data = null;
-      })
-      .addCase(fetchRegister.pending, (state) => {
-        state.status = 'loading';
-        state.data = null;
-      })
-      .addCase(fetchRegister.fulfilled, (state, action: PayloadAction) => {
-        state.status = 'loaded';
+      .addCase(fetchRegister.fulfilled, (state, action) => {
         state.data = action.payload;
-      })
-      .addCase(fetchRegister.rejected, (state) => {
-        state.status = 'error';
-        state.data = null;
+        const decodedToken: any = jwtDecode(action.payload.token);
+        state.role = decodedToken.role;
       });
   },
 });
 
-export const selectIsAuth = ( state ) => Boolean(state.auth.data);
-export const authReducer =  authSlice.reducer;
+export const selectIsAuth = (state: any) => Boolean(state.auth.data);
+export const selectRole = (state: any) => state.auth.role;
+
+export const authReducer = authSlice.reducer;
 export const { logout } = authSlice.actions;

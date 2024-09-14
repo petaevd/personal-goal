@@ -1,0 +1,70 @@
+/* Контейнер таблицы */
+.admin-panel {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    max-width: 900px;
+    margin: 20px auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.admin-panel-title {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+}
+
+/* Стили для таблицы */
+.admin-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+}
+
+.admin-table th,
+.admin-table td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+.admin-table th {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.admin-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.admin-table tr:hover {
+    background-color: #ddd;
+}
+
+/* Кнопки */
+button {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.edit-btn {
+    background-color: #2196F3;
+    color: white;
+    margin-right: 10px;
+}
+
+.edit-btn:hover {
+    background-color: #0b7dda;
+}
+
+.delete-btn {
+    background-color: #f44336;
+    color: white;
+}
+
+.delete-btn:hover {
+    background-color: #da190b;
+}
